@@ -1,0 +1,155 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5006,        145]
+NotebookOptionsPosition[      4642,        127]
+NotebookOutlinePosition[      4995,        143]
+CellTagsIndexPosition[      4952,        140]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"TTarg", "[", "x_", "]"}], " ", ":=", 
+   StyleBox[
+    RowBox[{"CDF", "[", 
+     RowBox[{
+      RowBox[{"ExponentialDistribution", "[", "0.5", "]"}], ",", "x"}], "]"}],
+    
+    Background->RGBColor[1, 0.925, 0.925]]}], 
+  StyleBox[";",
+   Background->RGBColor[1, 0.925, 0.925]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Targ", "[", "x_", "]"}], " ", ":=", " ", 
+    RowBox[{
+     RowBox[{"TTarg", "'"}], "[", "x", "]"}]}], " ", ";"}], 
+  StyleBox["\[IndentingNewLine]",
+   Background->RGBColor[1, 0.925, 0.925]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mu", " ", ":=", " ", "1"}], " ", ";", 
+  RowBox[{"S", ":=", " ", "2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x", "*", 
+         RowBox[{"Targ", "[", "x", "]"}]}], ",", 
+        RowBox[{
+         FractionBox["mu", 
+          FractionBox[
+           SuperscriptBox["S", "2"], "2"]], 
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox["1", "2"], "-", 
+           RowBox[{"TTarg", "[", "x", "]"}]}], ")"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0", ",", "10"}], "}"}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "1"}], ",", "5"}], "}"}]}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"S", ",", "0.001", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"mu", ",", "0.01", ",", "2"}], "}"}]}], "]"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{"Dynamic", "[", 
+  RowBox[{"MousePosition", "[", "\"\<Graphics\>\"", "]"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6806936210096693`*^9, 3.680693629218441*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`mu$$ = 0.166, $CellContext`S$$ = 
+    0.47600000000000003`, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`S$$], 0.001, 2}, {
+      Hold[$CellContext`mu$$], 0.01, 2}}, Typeset`size$$ = {
+    360., {113., 118.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`S$1091$$ = 
+    0, $CellContext`mu$1092$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`mu$$ = 0.01, $CellContext`S$$ = 0.001}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`S$$, $CellContext`S$1091$$, 0], 
+        Hold[$CellContext`mu$$, $CellContext`mu$1092$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{$CellContext`x $CellContext`Targ[$CellContext`x], \
+($CellContext`mu$$/($CellContext`S$$^2/2)) (
+          1/2 - $CellContext`TTarg[$CellContext`x])}, {$CellContext`x, 0, 10},
+         PlotRange -> {-1, 5}], 
+      "Specifications" :> {{$CellContext`S$$, 0.001, 2}, {$CellContext`mu$$, 
+         0.01, 2}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {171., 176.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.6806936044656963`*^9, 3.680693630204667*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   MousePosition["Graphics"], StandardForm],
+  ImageSizeCache->{31., {1., 8.}}]], "Output",
+ CellChangeTimes->{{3.6806936044656963`*^9, 3.680693630379918*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 602},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 11, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1815, 54, 242, "Input"],
+Cell[2398, 78, 2031, 40, 364, "Output"],
+Cell[4432, 120, 194, 4, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
